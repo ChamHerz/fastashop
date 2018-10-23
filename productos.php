@@ -10,12 +10,10 @@ else {
 	$query = "SELECT ID_PUBLICACION, TITULO_ARTICULO, DESC_ARTICULO, PRECIO, IMAGEN_PATH FROM publicacion";
 }
 
-
-include 'core/conexion/cn.php';
-
-$conexion = conectarbd();
-
-$result = mysqli_query($conexion, $query);
+if (isset($_GET['buscar'])) {
+	$buscar = $_GET['buscar'];
+	$query = "SELECT ID_PUBLICACION, TITULO_ARTICULO, DESC_ARTICULO, PRECIO, IMAGEN_PATH FROM publicacion WHERE TITULO_ARTICULO LIKE '%".$buscar."%'";
+}
 
 include 'core/head/head.php'; 
 ?>
@@ -25,7 +23,11 @@ include 'core/head/head.php';
 		<?php include 'core/barra-sup/barra-sup.php'; ?>
 		<div style="margin-top: 100px;">
 			<div class="card-deck">
-				<?php while ($row = mysqli_fetch_array($result)) { ?>
+				<?php 
+					$conexion = conectarbd();
+					$result = mysqli_query($conexion, $query);
+					
+					while ($row = mysqli_fetch_array($result)) { ?>
 				<div class="card card-styles">
 	    			<img class="card-img-top imagen-style" src="<?php echo $row['IMAGEN_PATH']; ?>" alt="Card image cap">
 	    			<div class="card-body">

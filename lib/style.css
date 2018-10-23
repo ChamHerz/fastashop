@@ -25,3 +25,13 @@
 	font-weight: bold !important;
 	font-size: 25px !important;
 }
+
+.icon-login {
+	width: 150px;
+	height: 150px;
+	margin: 20px;
+}
+
+.campo-comentarios {
+	display: inline-block;
+}

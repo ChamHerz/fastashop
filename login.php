@@ -11,18 +11,16 @@ include 'core/head/head.php';
 		
 <div class="container text-center">
     <div class="row">
-        <div class="col-sm-4 col-md-4 col-md-offset-4">
+        <div class="col-sm-4 col-md-4 col-md-offset-4 register-style">
             <div class="account-wall">
-                <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
-                    alt="">
-                <form action="Validar.php" method="post" class="form-signin">
-                <input type="text" name="usuario" id="InputUsuario" class="form-control" placeholder="Usuario" required autofocus>
-                <input type="password" name="clave" id="InputContrasenia" class="form-control" placeholder="Password" required>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" >
-                    Sign in</button>             
+                <img src="core/icon/person.svg" alt="icon name" class="icon-login">
+                <form action="core/conexion/validar-login.php" method="post" class="form-signin">
+                    <input type="text" name="usuario" id="InputUsuario" class="form-control" placeholder="Usuario" required autofocus>
+                    <input type="password" name="clave" id="InputContrasenia" class="form-control" placeholder="Password" required>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>             
                 </form>
             </div>
-            <a href="Login.php" class="text-center new-account">Nuevo Usuario </a>
+            <a href="register.php" class="text-center new-account">Nuevo Usuario </a>
         </div>
     </div>
 </div>
