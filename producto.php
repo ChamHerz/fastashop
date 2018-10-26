@@ -113,7 +113,7 @@ include 'core/head/head.php';
 						  <div class="input-group-prepend">
 						    <span class="input-group-text"><b>Comentario</b></span>
 						  </div>
-						  <textarea class="form-control" aria-label="With textarea"><?php echo $rowComent['COMENTARIO']; ?></textarea>
+						  <textarea class="form-control" aria-label="With textarea" readonly><?php echo $rowComent['COMENTARIO']; ?></textarea>
 						</div>
 					  </div>
 					</div>

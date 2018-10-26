@@ -61,11 +61,6 @@ include 'core/head/head.php';
 						<input type="password" name="password" id="inputpassword" class="form-control input-lg" placeholder="Password" tabindex="7" required autofocus>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="form-group">
-						<input type="password" name="password_confirmacion" id="inputpassword_confirmacion" class="form-control input-lg" placeholder="Confirmar Password" tabindex="8" required autofocus>
-					</div>
-				</div>
 			</div>
 					
 			<div class="form-group">
