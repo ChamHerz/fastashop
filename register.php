@@ -9,7 +9,7 @@ include 'core/head/head.php';
 	<div class="container-fluid">
 		<?php include 'core/barra-sup/barra-sup.php'; ?>
 		
-<form action="core/conexion/new-user.php" method="post" class="form-register" onsubmit="return_validar();">
+<form action="new-user.php" method="post" class="form-register" onsubmit="return_validar();">
 		<div class="container">
 
 <div class="row">

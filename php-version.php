@@ -1,6 +1,6 @@
 <?php
 
-$title = "PHP Version";
+$title = "Version de php";
 
 include 'core/head/head.php'; 
 ?>
@@ -8,12 +8,11 @@ include 'core/head/head.php';
 <body>
 	<div class="container-fluid">
 		<?php include 'core/barra-sup/barra-sup.php'; ?>
-		</br>
-	</br>
-	</br>
-		<?php 
+		<div style="margin-top: 100px;">
+			<?php
 			phpinfo();
-		?>
+			?>
+		</div>
 	</div>
 	<?php include 'core/footer/footer.php'; ?>
 </body>

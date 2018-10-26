@@ -58,7 +58,7 @@ include 'core/head/head.php';
 							<span id="id-publicacion" style="display: none;"><?php echo $row['ID_PUBLICACION']; ?></span>
 							<input type="text" name="Nombre" id="InputNombre" class="form-control input-lg" placeholder="Nombre(opcional)" tabindex="1" autofocus>
 							<input type="text" name="Email" id="InputEmail" class="form-control input-lg" placeholder="Email(opcional)" tabindex="2" autofocus>
-							<textarea rows="5" name="Mensaje" id="InputMensaje" class="form-control input-lg" placeholder="Ingrese el mensaje" tabindex="3" autofocus></textarea>
+							<textarea rows="5" name="Mensaje" id="InputMensaje" class="form-control input-lg" placeholder="Ingrese el mensaje" tabindex="3" autofocus required></textarea>
 							<input type="button" value="Enviar Mensaje" class="btn btn-primary btn-block btn-lg boton-enviar-mensaje" tabindex="4">
 						</form>
 						<div id="resultado">
@@ -66,7 +66,8 @@ include 'core/head/head.php';
 
 						<?php
 						if ($esOwner) {
-							echo "<button type='button' class='btn btn-danger btn-block btn-lg'>Borrar Producto</button>";
+							$idPublicacion = $row['ID_PUBLICACION'];
+							echo "<a class='btn btn-danger btn-block btn-lg' href='delete-producto.php?id=$idPublicacion'>Borrar Producto</a>";
 						}
 
 						?>

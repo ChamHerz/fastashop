@@ -1,5 +1,5 @@
 <?php 
-include 'cn.php';
+include 'core/conexion/cn.php';
 $nombre =$_POST["Nombre"];
 $apellido =$_POST["Apellido"];
 $sexo =$_POST["genero"];
@@ -28,11 +28,24 @@ $resultado= mysqli_query($conexion,$insertar);
 
 }
 
-if (!$resultado){
-	echo 'error al registrar el usuario nuevo';
-}	else{ 
-	echo 'Usuario Registrado correctamente';	
-}	
 mysqli_close($conexion);
 
+$title = "Nuevo Usuario Validado";
+
+include 'core/head/head.php'; 
 ?>
+</head>
+<body>
+	<div class="container-fluid">
+		<?php include 'core/barra-sup/barra-sup.php';
+		if ($resultado) {
+			echo '<div class="alert alert-success alert-dismissable" id="flash-msg"><button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button><h4><i class="icon fa fa-check"></i>Registrado con exito. Bienvenido!</h4></div>';
+		}
+		else {
+			echo "<div class='alert alert-danger'>Error de registro.</div>";
+		}
+		?>
+	</div>
+	<?php include 'core/footer/footer.php'; ?>
+</body>
+</html>
